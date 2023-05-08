@@ -69,5 +69,17 @@ while True:
 
     #Draw a label with the name below the face
     cv2.rectangle(frame, (left, bottom -35), (right, bottom), (0,0,255), cv2.FILLED)
-    
+    font = cv2.FONT_HERSHEY_DUPLEX
+    cv2.putText(frame, name, (left + 6, bottom -6), font, 1.0, (255,255,255), 1)
+
+    #Display the resulting image
+    cv2.imshow("Face detection (type Q to quit)", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+#Release the webcam
+video_capture.release()
+cv2.destroyAllWindows()
+
 
