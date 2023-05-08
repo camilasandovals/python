@@ -1,4 +1,6 @@
 def addTwoNumbers(a, b):
     return a + b
 
-addTwoNumbers(10 , 12)
+ans = addTwoNumbers(10 , 12)
+
+print(ans)
